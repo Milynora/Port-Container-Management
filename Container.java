@@ -12,4 +12,8 @@ class Container {
     public String toString() {
     	return String.format("%-6s | %-12s | %4dkg", id, description, weight);
     }
+    
+    public String toInlineString() {
+    	return String.format("%s | %s | %dkg", id, description, weight);
+    }
 }
