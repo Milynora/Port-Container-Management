@@ -10,4 +10,8 @@ class Ship {
     public String toString() {
     	return String.format("%-12s | Capt. %-12s", name, captain);
     }
+    
+    public String toInlineString() {
+    	return String.format("%s | Capt. %s", name, captain);
+    }
 }
