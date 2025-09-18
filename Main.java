@@ -45,7 +45,7 @@ public class Main {
 
                     Container container = new Container(id, desc, weight);
                     containerStack.push(container);
-                    System.out.println("\nStored: " + container);
+                    System.out.println("\nStored: " + container.toInlineString());
                     break;
 
                 case 2:
@@ -69,7 +69,7 @@ public class Main {
 
                     Ship ship = new Ship(shipName, captain);
                     shipQueue.offer(ship);
-                    System.out.println("\nRegistered: " + ship);
+                    System.out.println("\nRegistered: " + ship.toInlineString());
                     break;
 
                 case 4:
@@ -92,7 +92,7 @@ public class Main {
                     } else {
                         Container loadedContainer = containerStack.pop();
                         Ship loadingShip = shipQueue.poll();
-                        System.out.println("Loaded: " + loadedContainer + " → " + loadingShip);
+                        System.out.println("Loaded: " + loadedContainer.toInlineString() + " → " + loadingShip.toInlineString());
                         System.out.println("Remaining containers: " + containerStack.size());
                         System.out.println("Remaining ships waiting: " + shipQueue.size());
                     }
